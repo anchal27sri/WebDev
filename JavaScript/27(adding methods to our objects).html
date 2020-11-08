@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script type="text/javascript">
+            function person(name, age) {
+                this.name = name;
+                this.age = age;
+                this.retire = yearsleft;
+            }
+            
+            var bucky = new person("Dummy",33);
+
+            function yearsleft() {
+                return 80 - this.age;
+            }
+        </script>
+    </head>
+    <body>
+        hello
+        <script type="text/javascript">
+            document.write(bucky.retire());
+        </script>
+    </body>
+</html>

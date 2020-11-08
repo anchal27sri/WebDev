@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var arr = new Array(1,2,3,4,5);
+            var brr = new Array(5);
+            var crr = new Array();
+            var drr = new Array(1,2);
+            var err = new Array(3,4,5);
+            drr = drr.concat(err);
+
+            var sum;
+            document.write(sum + "<br>");
+            sum = 0;
+            for(var i=0;i<5;i++)
+                {
+                    brr[i] = i;
+                    crr.push(i);
+                    sum += (arr[i]+brr[i]+crr.length+drr[i]); 
+                }
+            document.write(sum);
+        </script>
+    </body>
+</html>

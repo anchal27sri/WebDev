@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+        <form name="myForm">
+            Username: <input type="text" name="username"/>
+            <br><br>
+            Password: <input type="password" name="password"/>
+            <br><br>
+            <input type="submit" value="Submit!"/>
+
+        </form>
+    <body>
+        <script type="text/javascript">
+            //when a form there, javascript automatically sees that
+            //it automatically creates an array of all the forms contained in the document object
+            var x = document.forms[0].length;//since there is only form in the docuemnt
+            document.write(x+"<br>");//the value of x is 3 because there are only 3 elements in the form
+
+            var un = document.myForm.elements[0]; //to access something, we can use the array element using index or directly using its name
+            var p = document.myForm.password; 
+            document.write(un.name+" "+p.name);
+
+            
+        </script>
+    </body>
+</html>

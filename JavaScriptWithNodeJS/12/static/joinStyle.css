@@ -1,0 +1,19 @@
+input, textarea{
+    display: block;
+    padding: 5px;
+    margin: 15px auto;
+    width: 60%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.btn{
+    display: flex;
+    margin: 15px 50%;
+}
+
+form#Contact {
+    padding-top: 10px;
+    height: 610px;
+}

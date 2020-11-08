@@ -1,0 +1,20 @@
+{
+  "name": "tutorial7",
+  "version": "1.0.0",
+  "description": "best package",
+  "main": "7.js",
+  "scripts": {
+    "test": "kk"
+  },
+  "keywords": [
+    "halla"
+  ],
+  "author": "Anchal",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

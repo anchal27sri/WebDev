@@ -1,0 +1,32 @@
+//- index.pug
+doctype html
+html
+  head
+    title MyDanceAcademia
+    style
+      include ../static/style.css
+  body
+    nav#navbar.top
+        ul
+            li #[a(href='/') Home]
+            li #[a(href='/') About]
+            li #[a(href='/') Contact Us]
+            li #[a(href='/') Services]
+            li #[a(href='/') Join]
+    section#introSection
+        div Welcome to MyDanceAcademia
+    section#ourMission
+        h3 Our Mission
+        div.cardContainer
+            div.card
+                p Awesome Dance 
+            div.card
+                p Awesome Shows
+            div.card
+                p Awesome Training
+    section#sponsorSection
+        h3 Our Sponsors
+    footer#footer
+        | our footer here
+    script
+      include ../static/index.js

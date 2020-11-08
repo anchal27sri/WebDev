@@ -1,0 +1,23 @@
+//- index.pug
+extends base.pug
+
+block scripts
+    style
+        include ../static/joinStyle.css
+
+block bodyContent
+    nav#navbar.top
+        ul
+            li #[a(href='/') Home]
+            li #[a(href='/') About]
+            li #[a(href='/') Contact Us]
+            li #[a(href='/') Services]
+            li #[a(href='/join') Join]
+    form#Contact(action='/' method='POST')
+        input#name(type='text' name='name' placeholder='Enter your name')
+        input#age(type='text' name='age' placeholder='Enter your Age')
+        input#gender(type='text' name='gender' placeholder='Enter your gender')
+        textarea#address(name='address' cols='30' rows='10' placeholder='Enter your address')
+        textarea#more(name='more' cols='30' rows='10' placeholder='Enter more about you.')
+        button.btn
+            a.textt Submit

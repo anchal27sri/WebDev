@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script type="text/javascript">
+            //to create a constructor function
+            function person(name, age, sex) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            var bucky = new person("Dummy",33,"male");
+            var ducky = new person("Sam",22,"female");
+            
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write(bucky.name + ducky.sex);
+        </script>
+    </body>
+</html>

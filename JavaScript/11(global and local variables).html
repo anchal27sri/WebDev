@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var b = "Bran"; //global to this script-space after it has been declared
+            function spit() {
+                document.write(b);
+                var a = "bb";
+            }
+            document.write(a); //not printing because a is local to the function spit()
+            spit();
+        </script>
+    </body>
+</html>

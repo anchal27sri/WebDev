@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- 
+a link is composed of different states
+one link can have four different styles
+and each style can have different properties.
+    
+-->
+
+<html>
+    <head>
+        <style type="text/css">
+            a:link {
+                color: red;
+                text-decoration: none;
+            } /*the initial state of the link*/
+            a:visited {
+                color:green;
+            } /*the final(after clicking and visisted) state of the link*/
+            a:hover {
+                background-color: blue;
+                color:white;
+                font-weight:bold;
+            } /* when mouse hovers*/
+            a:active {
+                background-color: orange;
+            } /*when the mouse button is pressed but not released */
+
+        </style>
+        
+    </head>
+    <body>
+        <a href="http://yahoo.com">To the google</a>
+        Lol that was awesome!
+    </body>
+</html>

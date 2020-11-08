@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style type="text/css"> 
+            /* p > a means all a's that are under p */
+            p > a {
+                color:red;
+                font-weight:bold;
+            }
+            a {
+                color:green;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <!-- here style is a child and head is a parent -->
+    <!-- we have to style all the links in the paragraph. -->
+    <body>
+        <a href="http://yahoo.com">first</a>
+        <p><a href="http://yahoo.com">This was good!</a></p>
+        <h3><a href="http://yahoo.com">This was first!</a></h3>
+    </body>
+</html>

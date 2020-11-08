@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var movies = new Array("Avatar","Goodwill Hunting","Fight Club","Gone Girl");
+            var string1 = movies.join(',');
+            //join takes every element in array and join it seprated with comma/separater
+            movies.pop();
+            var string2 = movies.join(' ');
+            document.write(string1+"<br>");
+            document.write(string2);
+            var bp = new Array("head","shoulders","knees");
+            bp.reverse();
+            bp.push("bingo","singo");
+            bp.sort();
+            var string3 = bp.join();
+            document.write("<br>"+string3+"<br>");
+            var arr = prompt("Enter your name","");
+            document.write("hello!"+arr);
+            
+        </script>
+    </body>
+</html>
