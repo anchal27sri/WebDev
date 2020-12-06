@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display property</title>
+    <style>
+        *{
+            box-sizing: border-box; /* total width will be exactly specified include margin and padding. Here, to all elements.*/
+        }
+        header{
+            /* inline: jintni milti hai jagah utni le lo */
+            /* display: inline; */
+            margin: auto;
+            width: 1200px;
+            border: 2px solid red;
+        }
+        img{
+            /* border: 2px solid green; */
+            margin: auto;
+            width: 84px;
+            display: block;
+        }
+        h3{
+            /* border: 2px solid blue; */
+            margin: auto;
+            display: block;
+            /* width: 300px; */
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .box{
+            border: 4px solid green;
+            background-color: lightblue;
+            width: 33.1%;
+            margin: 4px 0px;
+            padding: 23px;
+            display: inline-block;
+        }
+        .container{
+            margin: auto;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <img src="https://i.pinimg.com/originals/48/70/17/487017397ddc03eb526de703da124b81.jpg" alt="">
+        <h3>Welcome to my blog.</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="Heading">Heading1</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolor neque, officiis et facere id, ea vitae unde eos suscipit a earum. Ullam, quae sapiente. Sed repudiandae sequi iure! Quo accusantium qui ut voluptatibus.</p>
+        </div>
+        <div class="box">
+            <h4 class="Heading">Heading2</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolor neque, officiis et facere id, ea vitae unde eos suscipit a earum. Ullam, quae sapiente. Sed repudiandae sequi iure! Quo accusantium qui ut voluptatibus.</p>
+        </div>
+        <div class="box">
+            <h4 class="Heading">Heading3</h4>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt dolor neque, officiis et facere id, ea vitae unde eos suscipit a earum. Ullam, quae sapiente. Sed repudiandae sequi iure! Quo accusantium qui ut voluptatibus.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-    res.status(200).send("This is my first epxress app with Harry");
+    res.status(200).send("This is ABOUT my first epxress app with Harry");
 });
 
 app.post("/about", (req, res) => {

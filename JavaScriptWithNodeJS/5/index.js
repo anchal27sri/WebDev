@@ -2,10 +2,9 @@ const http = require('http');
 const { listenerCount } = require('process');
 const fs = require('fs');
 
-
 const hostname = '127.0.0.1';
 const port = 80;
-const home = fs.readFileSync('./index.html');
+const index = fs.readFileSync('./index.html');
 const about = fs.readFileSync('./about.html');
 const services = fs.readFileSync('./services.html');
 const contact = fs.readFileSync('./contact.html');
@@ -15,7 +14,7 @@ const server = http.createServer((req,res) => {
     res.setHeader('Content-Type','text/html');
     url = req.url;
     if(url == '/') {
-        res.end(home);
+        res.end(index);
     }
     else if(url == '/about') {
         res.end(about);

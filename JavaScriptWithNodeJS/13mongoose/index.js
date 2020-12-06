@@ -8,23 +8,24 @@ db.once('open', function() {
   console.log('we are connected bro!');
 });
 
+// creating a schema
 const kittySchema = new mongoose.Schema({
   name: String
 });
 
 // a document can have functions also.
 kittySchema.methods.speak = function () {
-  const greeting = "Meow name is ";
+  const greeting = "My Greetings!";
   console.log(greeting);
 }
 
-const Kitten = mongoose.model('Kitten', kittySchema);
+const Kitten = mongoose.model('Kittyy', kittySchema);
 
-const silence = new Kitten({ name: 'Silence' });
-console.log(silence.name); // 'Silence'
+// const kittenName = new Kitten({ name: 'Tom' });
+// console.log(kittenName.name);
 
-const fluffy = new Kitten({ name: 'fluffy' });
-fluffy.speak();
+const fluffy = new Kitten({ name: 'Cat' });
+// fluffy.speak();
 
 fluffy.save(function (err, fluffy) {
   if (err) return console.error(err);

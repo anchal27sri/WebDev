@@ -11,6 +11,7 @@ template.
 To create a pug template: 
 set the template engine as pug.
 */
+
 const express = require("express");
 const app = express();
 const port = 80;
@@ -26,7 +27,7 @@ app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'));
 
 // Our pug demo end point
-app.get('/demo', function (req, res) {
+app.get('/demo', (req, res) => {
     res.status(200).render('demo', { title: 'Hey Parru', message: 'Hello there! Happy Birthday!' });
 })
 
