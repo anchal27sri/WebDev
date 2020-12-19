@@ -1,0 +1,50 @@
+<!-- 
+Endless new resolution and devices ared difficult to support separately 
+for a web developer
+responsive design is a way for a web develper to make his website adapt to
+all website adapt to all the devices and resolutions.
+Responsive design is a necessity and not a luxury anymore!
+
+x em-units: x times of parent if font-size is not given.
+            Otherwise, x times of font-size.
+
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size units</title>
+    <style>
+        .container{
+            /* vw view port width */
+            
+            /* vh: view port height */
+            height: 100vh; 
+            font-size: 10px;
+            border: 2px solid red;
+            margin: auto;
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            font-size: 4em;
+        }
+        #second{
+            /* 3 times of 10px (parent font-size), that is 30px. */
+            font-size: 3em;
+            /* 3 times of font-size, that is 90px */
+            padding: 3em; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="thrid">This is third heading</h1>
+    </div> 
+</body>
+</html>

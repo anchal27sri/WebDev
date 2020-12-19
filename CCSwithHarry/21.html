@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow and Text shadow</title>
+    <style>
+        .container{
+            display: flex;
+            /* justify-content: center; */
+            border: 2px solid red;
+        }
+        .card{
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 2px solid; */
+            background-color: bisque;
+            /* box-shadow: 7px -7px 10px grey; */
+            /* box-shadow: -7px 7px 10px grey; */
+            /* syntax:
+                box-shadow: offset-x offset-y blur-radius spread-radius color;
+            */
+            box-shadow: -7px 7px 10px 4px grey;
+        }
+        .card h2{
+            text-shadow: 1.5px 1.5px grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="item-1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet incidunt natus neque nulla, expedita rerum odit nobis error facere eum quia molestiae aliquid commodi assumenda, vel officiis, sunt nemo minus.</p>
+        </div>
+        <div class="card" id="item-2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nemo, accusantium enim aliquam itaque autem porro dolores error veritatis eius sed rem cum tempora! Cupiditate accusamus labore molestiae vel ipsam.</p>
+        </div>
+        <div class="card" id="item-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti dolorum recusandae voluptatum animi iste laudantium tempore molestias ad fuga veritatis maiores saepe laboriosam incidunt at nam, eius rem? Repudiandae.</p>
+        </div>
+        <div class="card" id="item-4">
+            <h2>Card4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti dolorum recusandae voluptatum animi iste laudantium tempore molestias ad fuga veritatis maiores saepe laboriosam incidunt at nam, eius rem? Repudiandae.</p>
+        </div>
+    </div>
+</body>
+</html>

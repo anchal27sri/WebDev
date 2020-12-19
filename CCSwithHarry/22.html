@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom properties</title>
+</head>
+<style>
+    /* Global variables: */
+    :root {
+        --primary-color: orange;
+        --secondary-color: rgb(126, 104, 34);
+        --shadow-color: grey;
+        --background-color: rgb(190, 197, 126);
+        --maxw: 333px;
+    }
+    .box{
+        /* declaring and initializing a variable */
+        /* Its a local variable for now (limited to this box) */
+        --box-color: grey;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(231, 208, 187);
+        background-color: var(--primary-color);
+        border: 2px solid rgb(114, 93, 37);
+        border: 2px solid var(--secondary-color);
+        margin: 5px 10px;
+        box-shadow: 3px 3px rgb(122, 90, 153);
+        box-shadow: 4px 4px 3px 2px var(--box-color);
+        box-shadow: 4px 4px 3px 2px var(--shadow-color);
+    }
+    .container{
+        display: flex;
+        max-width: var(--maxw);
+        background-color: var(--background-color);
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="car-1">
+            <h2>Card1</h2>
+        </div>
+        <div class="box" id="car-1">
+            <h2>Card1</h2>
+        </div>
+        <div class="box" id="car-1">
+            <h2>Card1</h2>
+        </div>
+    </div>
+</body>
+</html>

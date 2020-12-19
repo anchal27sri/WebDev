@@ -1,0 +1,43 @@
+<!-- 
+Responsive Design: Media Query
+When screen size changes, an extra css is injected in the style sheet.
+
+only screen: checks if it is screen and nothing else (like brail screen).
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>MediaQuery</title>
+     <style>
+        .box{
+            font-size: 72px;
+            text-align: center;
+            background-color: red;
+            color: rgb(255, 255, 255);
+            display: none;
+        }
+        @media only screen and (max-width: 500px) {
+            #box1{
+                display: block;
+                background-color: aqua;
+            }
+        }
+        @media only screen and (max-width: 500px) and (min-width: 300px) {
+            #box2{
+                display: block;
+                background-color: brown;
+            }
+        }
+     </style>
+ </head>
+ <body>
+     <div class="box" id="box1">I am apple</div>
+     <div class="box" id="box2">I am orange</div>
+     <div class="box" id="box3">I am pinapple</div>
+     <div class="box" id="box4">I am pine what?</div>
+ </body>
+ </html>

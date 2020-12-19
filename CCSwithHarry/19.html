@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selctors</title>
+    <style>
+        .container {
+            display: block;
+            width: 233px;
+            margin: auto;
+        }
+
+        input {
+            display: block;
+        }
+
+        /* Affect only elements whose input type is text: */
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid rgb(44, 33, 206);
+        }
+
+        /* Target specific pseudo selectors */
+        a[target] {
+            font-size: 30px;
+            color: violet;
+        }
+
+        a[target='_self'] {
+            font-size: 30px;
+            color: rgb(22, 44, 92);
+        }
+
+        /* nth element of li */
+        li:nth-child(3) {
+            color: cyan;
+        }
+
+        /* All even child (you can also fill 'even' like in next ex)*/
+        li:nth-child(2n) {
+            color: red;
+        }
+
+        /* All odd child */
+        li:nth-child(odd) {
+            color: rgb(30, 255, 0);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">item-1</li>
+            <li class="item" id="item-2">item-2</li>
+            <li class="item" id="item-3">item-3</li>
+            <li class="item" id="item-4">item-4</li>
+            <li class="item" id="item-5">item-5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

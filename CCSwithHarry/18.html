@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors: Pseudo Selectors</title>
+    <style>
+        h1{
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* Uncomment each section one by one */
+        /* This will affect all p's inside a div at any level. Thus it will effect even if p is inside a ul or li. */
+        /* div p{
+            color: yellow;
+            font-weight: bold;
+            background-color: greenyellow;
+        } */
+        /* To affect the p in li : */
+        /* div li p{
+            color: rgb(21, 255, 0);
+            font-weight: bold;
+            background-color: rgb(47, 61, 255);
+        } */
+        /* To affect only immediate children of div: */
+        /* div > p {
+            color: yellow;
+            background-color: rgb(32, 53, 71);
+            font-weight: bold;
+        } */
+        /* To affect the previous sibling */
+        /* div + p {
+            color: rgb(235, 235, 217);
+            background-color: rgb(0, 2, 3);
+            font-weight: bold;
+        } */
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors.</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item"><p>This is another paragraph inside li</p></li>
+                <li>This will not be affected</li>
+            </ul>
+            <p>This is paragraph</p>
+        </div>
+    </div>
+    <p>This is the outermost paragraph</p>
+</body>
+</html>

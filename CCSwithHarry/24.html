@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Transitions</title>
+</head>
+    <style>
+        /* .container{
+
+        } */
+        #box{
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(248, 252, 1);
+            display: flex;
+            /* transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+            /* Transition one-liner */
+            /* transition: background-color 4s ease-out 0.3s; */
+            transition: all 4s ease-out 0.3s;
+            /* Note: Only those properties are transitionable whose values are continues. */
+        }
+        #box:hover {
+            background-color: red;
+            height: 400px;
+            width: 400px;
+            border-radius: 40px;
+            color: white;
+        }
+    </style>
+<body>
+    <h3>
+        This is CSS Transition Tutorial.
+    </h3>
+    <div class="container">
+        <div id="box">
+            This is my Box.
+        </div>
+    </div>
+</body>
+</html>

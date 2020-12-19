@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 170px;
+            height: 170px;
+            border: 2px solid red;
+        }
+        #box1{
+            position: relative;
+            background-color: greenyellow;
+            /* z-index will only work for postion: relative, absolute, sticky or fixed; */
+            /* z-indexd decides which element will given the priority in case of stacking (kon kiske upar ayega). */
+            top: 33;
+            z-index: 12;
+        }
+        #box2{
+            position: relative;
+            background-color: yellow;
+            /*
+            visibility: hidden -> the box won't be visible but it will be there.
+            display: none -> removes the box from the display;
+             */
+            /* visibility: hidden; */
+            /* display: none; */
+            top: -23;
+            z-index: 23;
+
+        }
+        #box3{
+            background-color: palegoldenrod;
+        }
+        #box4{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

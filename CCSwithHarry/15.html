@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box tutorial</title>
+    <style>
+        .container{
+
+            height: 444px;
+            width: 100%;
+            border: 2px solid black;
+            /* Initialize the container as a flex box */
+            display: flex;
+            /* Flex properties for flex container */
+            /* Flex direcection by default is row */
+            
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+
+            flex-wrap: wrap; 
+            /* flex-wrap: wrap-reverse; */
+            /* default value: no-wrap */
+
+             /* put all of the contents in the center */
+            /* justify-content: center; */
+            /* space evenly between each component including container*/
+            /* justify-content: space-evenly; */
+            /* space evenly only between companents excluding container*/
+            /* justify-content: space-between; */
+            /* fix margin to get it evenly. */
+            /* justify-content: space-around; */
+
+        }
+        .item{
+            background-color: tomato;
+            border: 2px solid darkred;
+            padding: 10px;
+            margin: 3px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First box</div>
+        <div class="item" id="item-2">Second box</div>
+        <div class="item" id="item-3">Third box</div>
+        <div class="item" id="item-4">Fourth box</div>
+        <div class="item" id="item-5">Fifth box</div>
+        <div class="item" id="item-6">Sixth box</div>
+    </div>
+</body>
+</html>
