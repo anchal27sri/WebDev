@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="css" href="css/style.css">
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        background: url('fitness.jpg');
+        color: white;
+    }
+    .left{
+        position: absolute;
+        /* display: inline-block; */
+        border: 2px solid red;
+        top: 20px;
+        left: 10px;
+        text-align: center;
+    }
+    .left img{
+        width: 100px;
+        height: 70px;
+        filter: invert(100);
+    }
+    .mid{
+        /* display: block; */
+        width: 45%;
+        border: 2px solid green;
+        margin: 20px auto;
+    }
+    .right{
+        position: absolute;
+        right: 34px;
+        top: 20px;
+        border: 2px solid yellow;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 25px;
+    }
+    .navbar li a{
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 34px 30px;
+        font-size: 20px;
+    }
+    .navbar li a:hover, .navbar li a.active{
+        text-decoration: underline;
+        color: grey;
+    }
+    .btn{
+        margin: 0px 9px;
+        color: white;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgb(27, 26, 26);
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- For LOGO -->
+            <img src="logo.jpg" alt="">
+            <br>
+            I am left;
+        </div>
+        <div class="mid">
+            <!-- Box for Navbar -->
+            <!-- I am mid; -->
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- Box for Buttons -->
+            <button class="btn">Call Us now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+</body>
+</html>

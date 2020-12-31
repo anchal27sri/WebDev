@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Portfolio</title>
+    <style>
+        .nav-link {
+            margin: 0px 2vh;
+        }
+
+        .container1 {
+            width: 100vw;
+        }
+
+        #backgroundImage {
+            filter: brightness(50%);
+            width: 100%;
+        }
+
+        #selfImage {
+            position: absolute;
+            height: 50%;
+            top: 15%;
+            left: 5%;
+        }
+
+        .container2 {
+            display: flex;
+            margin-top: 2%;
+        }
+
+        .container3 {
+            /* border: 2px solid red; */
+            /* background-image: linear-gradient(rgb(81, 187, 81),white,rgb(154, 240, 154)); */
+            box-sizing: border-box;
+            padding-top: 1%;
+        }
+
+        .quotation {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            display: inline-block;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            width: 50%;
+        }
+
+
+        .card-deck {
+            display: flex;
+            height: 40%;
+            padding-bottom: 1%;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 1%;
+            box-sizing: border-box;
+            /* border: 2px solid red; */
+        }
+
+        .card {
+            width: 25%;
+            height: 10%;
+            margin: auto;
+            /* height: auto; */
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px 0 black;
+            box-sizing: content-box;
+            border-radius: 10px;
+            color: white;
+            /* background-color: rgb(65, 65, 223); */
+            transition: all 0.2s ease-out 0.3s;
+            z-index: 400;
+        }
+
+        .card:hover {
+            width: 26%;
+        }
+
+        footer {
+            background-color: rgb(29, 29, 29);
+            height: 200px;
+            color: white;
+            margin-top: 2%;
+            padding: 4%;
+        }
+
+
+
+
+
+        .box1 {
+            width: 45%;
+            margin-top: 1%;
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+
+        .divider {
+            display: inline-block;
+            background-color: rgb(102, 238, 102);
+            width: 0.5%;
+            margin-bottom: 3%;
+            /* border: 2px solid rgb(73, 230, 73); */
+            /* height: 700px; */
+        }
+
+        ul.timeline {
+            list-style-type: none;
+            position: relative;
+        }
+
+        ul.timeline:before {
+            content: ' ';
+            background: #165aac;
+            display: inline-block;
+            position: absolute;
+            left: 29px;
+            width: 2px;
+            height: 100%;
+            z-index: 400;
+            margin-top: 1%;
+        }
+
+        ul.timeline>li {
+            margin: 10% 0;
+            padding-left: 20px;
+            display: flex;
+        }
+
+        ul.timeline>li:before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid #22c0e8;
+            left: 3.1%;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+            margin-top: 1%;
+        }
+
+        .subheading {
+            color: rgb(59, 59, 59);
+        }
+
+        .activityList {
+            color: rgb(124, 124, 124);
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .listItems {
+            margin: 1%;
+        }
+
+        .logo {
+            /* border: 2px solid red; */
+            height: 20%;
+            width: 10%;
+        }
+
+        .jobContainer {
+            margin-left: 2%;
+        }
+
+        .para {
+            color: gray;
+            text-align: justify;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-house-door" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" style="color: white;"
+                                d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z" />
+                        </svg>
+                    </a>
+                    <a class="nav-link active" aria-current="page" href="#">Portfolio</a>
+                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="Anchal_Srivastava(Resume).pdf">Resume</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </div>
+            </div>
+            <a class="form-inline" style="margin-right: 1%;" href="mailto: srivastavaanchal000@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="36px" height="36px">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+            </a>
+            <a class="form-inline" style="margin-right: 1%;" href="https://www.linkedin.com/in/anchal-srivastava-8783a9144/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" viewBox="0 0 24 24">
+                    <path
+                        d="M0 0v24h24v-24h-24zm8 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.397-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+            </a>
+            <a class="form-inline" style="margin-right: 1%;" href="https://github.com/anchal27sri">
+                <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+                    width="32" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                    </path>
+                </svg>
+            </a>
+            <a class="form-inline" style="margin-right: 1%;" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
+                    fill="black" width="36px" height="36px">
+                    <rect fill="none" height="24" width="24" />
+                    <path
+                        d="M22,12c0-5.52-4.48-10-10-10S2,6.48,2,12c0,4.84,3.44,8.87,8,9.8V15H8v-3h2V9.5C10,7.57,11.57,6,13.5,6H16v3h-2 c-0.55,0-1,0.45-1,1v2h3v3h-3v6.95C18.05,21.45,22,17.19,22,12z" />
+                </svg>
+            </a>
+
+        </div>
+    </nav>
+
+    <div class="container1">
+        <img src="slideImage3.jpg" id="backgroundImage" alt="img" height="500px" width=100%>
+        <img src="self.png" id="selfImage">
+        <div class="quotation">
+            <p>
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus id at, mollitia explicabo iusto
+                consequuntur nihil unde fuga, eveniet necessitatibus ab aspernatur placeat consectetur, consequatur
+                ullam dignissimos. Possimus, expedita doloremque?"
+            </p>
+            <p>----- By Bongolio</p>
+        </div>
+    </div>
+
+    <div class="container2">
+
+        <div class="box box1">
+            <h3>
+                About Me
+            </h3>
+            <p class="para">
+                Hello! My name is Anchal Srivastava. I am currently working as a full time Software Engineer in Sandvine
+                Technologies (India)
+                Pvt. Lt. I graduated from Indian Institute of Technology (Indian School of Mines), Dhanbad in May 2020
+                with a B.Tech degree in
+                Computer Science and Engineering branch.
+            </p>
+            <p class="para">
+                I beleive in working with a goal in a set time frame. Precesion, Punctuality, Perfection, Practice and
+                Performance are the 5 P's
+                that I try to follow. I try to give my 110% when the working is challenging.
+            </p>
+            <p class="para">
+                I have interests machine learning and statistics. They are the feilds of the future since they can tell
+                the future (predictions).
+                Thats why, I want to work on these and feel that my work is helping millions of people and making the
+                world a better place.
+            </p>
+        </div>
+
+        <div class="divider">.</div>
+
+        <div class="container mt-4 mb-7">
+            <div class="row">
+                <div class="col-md-8 offset-md-1">
+                    <h2>Experience</h2>
+                    <ul class="timeline">
+                        <li class="timeSpan">
+                            <img src="sandvineLogo.png" alt="" class="logo">
+                            <div class="jobContainer">
+                                <h5 class="heading">Sandvine Technologies Limited, Bangalore</h5>
+                                <h6 class="subheading">August 2020 - Present</h6>
+                                <p>Full Time</p>
+                                <ul class="activityList">
+                                    <li class="listItems">Worked in an agile environment.</li>
+                                    <li class="listItems">Contributed in low level projects like DPDK and Driver codes.
+                                    </li>
+                                    <li class="listItems">Contributed in python based projects like traffic shaping.
+                                    </li>
+                                    <li class="listItems">Tech stack used: TREX, iXIA, C, python and git.</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeSpan">
+                            <img src="samsungLogo.png" alt="" class="logo">
+                            <div class="jobContainer">
+                                <h5 class="heading">Samsung Research and Development, Bangalore</h5>
+                                <h6 class="subheading">June 2019 - August 2019</h6>
+                                <p>Summer Intern</p>
+                                <ul class="activityList">
+                                    <li class="listItems">Intern Poject: Making an SMS app that can detect spams.</li>
+                                    <li class="listItems">Trained a Machine Learning model which can identify spam by
+                                        using NLP techniques.</li>
+                                    <li class="listItems">Embedded a model in an android app using tensorflow lite.</li>
+                                    <li class="listItems">Tech stack used: Anaconda (Jupyter), Android Studio, Java,
+                                        Python (ML libraries like tensorflow, nltk, numpy, pandas, etc.) </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeSpan">
+                            <img src="ismLogo.png" alt="" class="logo">
+                            <div class="jobContainer">
+                                <h5 class="heading">Indian Institute of Technology (Indian School of Mines), Dhanbad
+                                </h5>
+                                <h6 class="subheading">July 2016 - May 2020</h6>
+                                <p>Student</p>
+                                <ul class="activityList">
+                                    <li class="listItems">Stream: Computer Science and Engineering</li>
+                                    <li class="listItems">Discipline: Batcheler of Technology</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="avatar"> -->
+    </div>
+
+
+
+    <div class="container3">
+        <h2 style="text-align: center; margin: 1%;"> My Projects </h2>
+        <div class="card-deck">
+            <div class="card bg-primary">
+                <img class="card-img-top" src="projectDemo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+            <div class="card bg-primary">
+                <img class="card-img-top" src="projectDemo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+            <div class="card bg-primary">
+                <img class="card-img-top" src="projectDemo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container3">
+        <div class="card-deck">
+            <div class="card bg-primary">
+                <img class="card-img-top" src="projectDemo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+            <div class="card bg-primary">
+                <img class="card-img-top" src="projectDemo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+            <div class="card bg-primary">
+                <img class="card-img-top" src="projectDemo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                        additional
+                        content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <footer>
+        Hellow world!
+    </footer>
+    <!-- </div> -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
