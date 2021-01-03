@@ -37,3 +37,7 @@ body{
 .navbar-dark{
     background-color: rgb(32, 86, 204);
 }
+
+.feedback{
+    margin: 20px 0px 20px 0px;
+}
