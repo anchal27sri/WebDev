@@ -103,16 +103,18 @@
                             <!-- </div> -->
                         </div>
                         <div class="form-group row">
-                            <label for="smake" class="col-12 col-md-2 col-form-label ml-3"><strong>Section</strong></label>
+                            <label for="smake"
+                                class="col-12 col-md-2 col-form-label ml-3"><strong>Section</strong></label>
                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-success active">
-                                  <input type="radio" name="options" id="option1" aria-pressed="true" autocomplete="off" checked> Non-Smoking
+                                    <input type="radio" name="options" id="option1" aria-pressed="true"
+                                        autocomplete="off" checked> Non-Smoking
                                 </label>
                                 <label class="btn btn-danger">
-                                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
                                 </label>
-                                
-                              </div>
+
+                            </div>
                         </div>
                         <div class="form-group row align-items-center">
                             <label for="telnum" class="col-12 col-md-2 col-form-label"><strong>Date and
@@ -159,9 +161,10 @@
             <!-- mr-auto: The content will be pushed as left as possible -->
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a href="./index.html" class="nav-link"><span class="fa fa-home"></span>
+                    <li class="nav-item"><a href="./index.html" class="nav-link"><span class="fa fa-home fa-lg"></span>
                             Home</a></li>
-                    <li class="nav-item"><a href="./aboutus.html" class="nav-link"><span class="fa fa-info"></span>
+                    <li class="nav-item"><a href="./aboutus.html" class="nav-link"><span
+                                class="fa fa-info fa-lg"></span>
                             About</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a>
                     </li>
@@ -169,7 +172,7 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"> Login </span>
                     </a>
                 </span>
@@ -191,9 +194,7 @@
                     <img src="img/logo.png" alt="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a data-toggle="modal" data-target="#reservationModal">
-                        <span role="button" class="btn btn-block nav-link btn-warning">Reserve Table</span>
-                    </a>
+                        <span id="reserveButton" role="button" class="btn btn-block nav-link btn-warning">Reserve Table</span>
                 </div>
                 <!-- <div class="btn bg-light">Hellow</div> -->
             </div>
@@ -254,6 +255,9 @@
                 <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
+                <button class="btn btn-danger btn-sm" id="carouselButton">
+                    <span class="fa fa-pause"></span>
+                </button>
             </div>
         </div>
     </div>
@@ -313,6 +317,28 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $("#carouselButton").click(function () {
+            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
+            }
+            else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                $("#mycarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');
+            }
+        });
+
+        $('#loginButton').click(function () {
+            $('#loginModal').modal('show');
+        });
+
+        $('#reserveButton').click(function () {
+            $('#reservationModal').modal('show');
+        });
+    </script>
 </body>
 
 </html>
