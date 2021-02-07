@@ -9,7 +9,7 @@ class DishDetail extends Component {
             return (
                 <div key={com.id} className="ul list-unstyled">
                     <li className=" mb-4">{com.comment}</li>
-                    <li className="mb-3"> -- {com.author} {com.date}</li>
+                    <li className="mb-3"> -- {com.author},  {new Intl.DateTimeFormat('en-US',{year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(com.date)))}</li>
                 </div>
             );
         });
@@ -19,7 +19,8 @@ class DishDetail extends Component {
     render() {
         if (this.props.dish) {
             return (
-                <div className="row">
+                <div className="container">
+                <di className="row">
                     <div className="col-12 col-md-5 m-1">
                         <Card>
                             <CardImg width="100%" object src={this.props.dish.image} alt={this.props.dish.name} />
@@ -33,6 +34,7 @@ class DishDetail extends Component {
                         <h4>Comments</h4>               
                         {this.renderComments(this.props.dish.comments)}
                     </div>
+                </di>
                 </div>
             );
         }
