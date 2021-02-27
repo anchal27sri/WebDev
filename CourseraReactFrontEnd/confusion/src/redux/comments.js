@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes';
 
 export const Comments = (state = COMMENTS, action) => {
 
-    console.log("Action payload: " + action.payload);
+    // console.log("Action payload: " + action.payload);
     switch (action.type) {
         case ActionTypes.ADD_COMMENT:
             var comment = action.payload;
@@ -14,3 +14,7 @@ export const Comments = (state = COMMENTS, action) => {
             return state;
     }
 }
+
+/*
+
+*/

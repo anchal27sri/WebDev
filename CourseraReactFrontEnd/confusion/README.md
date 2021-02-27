@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+<h1>Introduction to Redux</h1>
+Design Patterns:
+Well-Documented solution to a recurring problem
+Also referred to as an architecturlal pattern
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>Software design pattern</h2>
+-Reusable solution to commonly occurring problems 
+Gang of four- scientist
 
-## Available Scripts
+The Model View Countroller(MVC) Framework:
+Software engineering architecture pattern
+- Isolation of domain logic from user interface
+- Permists independent development 
 
-In the project directory, you can run:
+The separation of independent components leads to three parts of the application:
+- View: Presents the information to the user.
+- Model: Stores the domain state and the domain logic and also provides the way of manipulating this state from the rest of the aplication.
+- Controller: Mediates between the view and the model
 
-### `npm start`
+The model the model manages the behavior and data of the application domain. And the model responds to requestsfor inormation about current state. So typically when the view wants to render , or the view wants to update itself, it might query the model in order to obtain information, so that it can render appropriately to the user. The model also will repond the requests fror the chang eof its state. This is usually done throw the Controller. In an event-driven sytem, the model also can be configured to notify observers.The job of the controller is to receive information from that view. So any user interaction that is formed will be captured and then passed on to the controller in order to act on these user interactions. And it is the job of the controller then to initiate a change of the state of the model if it is required in this particular situation. So, the controller will appropriately cost the change of the state of the model. So, to summarize, the controller can accept input from the user in terms of the user interactions that have taken place, and then it will instruct the model to change the state. Simultaneously, the controllers may also cause the view to change the way information has been shown in the view. So that is the reason why in this picture, you have two arrows going from the controller.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2>The Flux Architecture:</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Motivation:
 
-### `npm test`
+Normally for the sake of simplicity and ease, react application are created in such a way that the main component has the state and it is responsible for other component's state that are being presented to the viewer. Thus, the main component handles all. 
+But this design is not sufficient but it works for only one hierarchy. Its possible that an application has multiple hierarchies. Having single root doesn't not simply scale that much.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Also, the problem with multiple hierarchy is, for example, suppose if one component's state is changed by a viewer and another components has to reflect it, then it will only be possible if they have same root. In case if they are present in different hierarchy, it will be very difficult to pass the state.
 
-### `npm run build`
+To manage all these, the apporach is to split our application into two different units. Therefore we can adapt MVC approach. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When React started, the react was supposed to be V in MVC. But its now much more than that now. But Facebook got some issues with the legacy MVC approach. Therefore, they went with their approach which was "like" MVC but different from that in certain ways. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Flux Architecture: 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Action -> Dispatcher -> Store -> viewer
 
-### `npm run eject`
+Thus, the central unit of our application is now store. Store contains all the states of the application. Everybody shares the store. The modification to the store is only allowed throw actions.
+Dispatcher is a controlling unit which monitors actions and determins how they will be executed. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Now, the View can't directly change the store. The view have to pass actions to the dispatcher which will apply actions to the store. The store will then send the updates if it changes to the views. This will result in rerendering of the component.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Action -> Dispatcher -> Store -> viewer -> Action -> Dispatcher -> Store-> View
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h2> Redux Thunk (Redux Middleware) </h2>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Provides the cappability to run code after an action is dispatched, but before it reaches the reducer. 
 
-## Learn More
+- Third-party externsion point
+- eg, logging, async API calls (intercept the action after calls)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Middleware: 
+- Form the pipeline after the dispatch
+- Inspection the actions and the state, 
+- modify actions,
+- dispatch other actions,
+- Stop actions from reachning the reducers, etc
