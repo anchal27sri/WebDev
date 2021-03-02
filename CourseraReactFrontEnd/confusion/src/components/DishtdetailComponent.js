@@ -30,12 +30,12 @@ class CommentForm extends Component {
     handleSubmit(values) {
         this.toggleModal();
         // console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values.comment));
-        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+        // alert("Current State is: " + JSON.stringify(values.comment));
+        this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
-        console.log('Comment Form ' + this.state.isModalOpen);
+        // console.log('Comment Form ' + this.state.isModalOpen);
         return (
             <div>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
@@ -100,7 +100,7 @@ class CommentForm extends Component {
     }
 }
 
-function RenderComments({ commentArray, addComment, dishId }) {
+function RenderComments({ commentArray, postComment, dishId }) {
     // console.log(commentArray);
     const menu = commentArray.map((com) => {
         if (com == null) return (<div></div>);
@@ -118,7 +118,7 @@ function RenderComments({ commentArray, addComment, dishId }) {
         <div className="col-12 col-md-5 m-1">
             <h4>Comments</h4>
             {menu}
-            <CommentForm dishId={dishId} addComment={addComment} />
+            <CommentForm dishId={dishId} postComment={postComment} />
         </div>
     );
 }
@@ -176,7 +176,7 @@ function DishDetail(props) {
                 <div className="row">
                     <RenderDish dish={props.dish} />
                     <RenderComments commentArray={props.comments}
-                        addComment={props.addComment}
+                        postComment={props.postComment}
                         dishId={props.dish.id} />
                 </div>
             </div>
