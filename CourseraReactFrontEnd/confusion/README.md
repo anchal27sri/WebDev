@@ -56,3 +56,17 @@ Middleware:
 - modify actions,
 - dispatch other actions,
 - Stop actions from reachning the reducers, etc
+
+React Transition Group
+A set of component for managing component states(including munting and unmounting) over time, specifically designed with animation in mind
+- Components supported: 
+1. Transition
+2. CSSTRAnsition
+3. TransitoinGroup
+
+Transition
+Lets you describe a transition from one component state to another over time
+- entering, entered, exiting, exited
+Used to animate the mounting and unmounting of a component
+The in prop is used to toggle the transition state
+- When true the component begins the sequence of entering -> 

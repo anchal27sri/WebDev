@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseURL';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
@@ -105,11 +106,13 @@ function RenderComments({ commentArray, postComment, dishId }) {
     const menu = commentArray.map((com) => {
         if (com == null) return (<div></div>);
         return (
-            <div key={com.id} className="ul list-unstyled">
+            <Fade in>
+            <li key={com.id} className="ul list-unstyled">
                 <p >{com.comment}</p>
                 <p > -- {com.author},  {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(com.date)))}</p>
 
-            </div>
+            </li>
+            </Fade>
         );
     });
 
@@ -117,8 +120,12 @@ function RenderComments({ commentArray, postComment, dishId }) {
     return (
         <div className="col-12 col-md-5 m-1">
             <h4>Comments</h4>
-            {menu}
+            <ul className="list-unstyled">
+            <Stagger in>
+                {menu}
             <CommentForm dishId={dishId} postComment={postComment} />
+            </Stagger>
+            </ul>
         </div>
     );
 }
@@ -127,13 +134,20 @@ function RenderDish({ dish }) {
     // console.log(dish.name);
     return (
         <div className="col-12 col-md-5 m-1">
-            <Card>
-            <CardImg top src={baseUrl + dish.image} alt={dish.name} />
-                <CardBody>
-                    <CardTitle heading>{dish.name}</CardTitle>
-                    <CardText>{dish.description}</CardText>
-                </CardBody>
-            </Card>
+            <FadeTransform in
+                transformProps={
+                    {
+                        exitTransform: 'scale(0.5) translateY(-50%)'
+                    }
+                }>
+                <Card>
+                    <CardImg top src={baseUrl + dish.image} alt={dish.name} />
+                    <CardBody>
+                        <CardTitle heading>{dish.name}</CardTitle>
+                        <CardText>{dish.description}</CardText>
+                    </CardBody>
+                </Card>
+            </FadeTransform>
         </div>
     );
 }
@@ -146,7 +160,7 @@ function DishDetail(props) {
         return (
             <div className="container">
                 <div className="row">
-                    <Loading/>
+                    <Loading />
                 </div>
             </div>
         );
