@@ -1,4 +1,3 @@
-import { COMMENTS } from '../shared/comments';
 import * as ActionTypes from './ActionTypes';
 
 export const Comments = (state = {
@@ -13,6 +12,7 @@ export const Comments = (state = {
 
         case ActionTypes.COMMENTS_FAILED:
             return { ...state, errMess: action.payload };
+            
         case ActionTypes.ADD_COMMENT:
             var comment = action.payload;
             // console.log("Comments:", comment);

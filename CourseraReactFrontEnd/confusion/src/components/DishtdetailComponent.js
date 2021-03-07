@@ -123,8 +123,8 @@ function RenderComments({ commentArray, postComment, dishId }) {
             <ul className="list-unstyled">
             <Stagger in>
                 {menu}
-            <CommentForm dishId={dishId} postComment={postComment} />
             </Stagger>
+            <CommentForm dishId={dishId} postComment={postComment} />
             </ul>
         </div>
     );
