@@ -1,18 +1,17 @@
-var rect = {
-    perimeter: (x, y) => (2*(x+y)),
-    area: (x,y) => x*y
-};
+var rect = require('./rectangle.js');
 
 function solveRectangle (l, b) {
     console.log ("Solving for rectangle with l = " + l + " and b = " + b);
 
-    if ( l <= 0 || b <= 0) {
-        console.log ("Ddimensions should be greater than 0!!");
-    }
-    else {
-        console.log ("The Area of the rectangle is:" + rect.area(l, b));
-        console.log ("The perimeeter of the rectangle is: ", rect.perimeter (l, b));
-    }
+    rect (l, b, (err, rectangle) => {
+        if (err) {
+            console.log ("ERROR: ", err.message);
+        } else {
+            console.log ("The area of the reactangle of dimensions: l = " + l + " b  = " + b + " is : " + rectangle.area());
+            console.log ("The peri of the reactangle of dimensions: l = " + l + " b  = " + b + " is : " + rectangle.perimeter());
+        }
+    });
+    console.log ("This statement is after the call to rec");
 }
 
 solveRectangle (2, 4);
