@@ -14,11 +14,19 @@ connect.then((db) => {
     })
     .then((dish) => {
         console.log(dish);
-        return Dishes.find({}).exec();
+        return Dishes.findByIdAndUpdate(dish._id, {
+            $set: {description: 'Updated test'},
+        }, 
+        {new: true}).exec();
     })
-    .then((dishes) => {
-        console.log(dishes);
-        return Dishes.remove({});
+    .then((dish) => {
+        console.log(dish);
+        dish.comment.push({
+            rating: 5,
+            comment: 'I\'m getting a sinking feeling!',
+            author: 'Leonardo di Carpaccio'
+        });
+        return dish.save();
     })
     .then(() => {
         return mongoose.connection.close();
@@ -27,3 +35,5 @@ connect.then((db) => {
         console.log(err);
     });
 });
+
+// mongod --dbpath=data --bind_ip 127.0.0.1
